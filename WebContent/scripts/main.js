@@ -41,7 +41,7 @@
       // session is still valid
       function(res) {
         var result = JSON.parse(res);
-
+    
         if (result.status === 'OK') {
           onSessionValid(result);
         }
@@ -339,6 +339,7 @@
     xhr.open(method, url, true);
 
     xhr.onload = function() {
+    	console.log(xhr);
       if (xhr.status === 200) {
         successCallback(xhr.responseText);
       } else {
